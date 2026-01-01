@@ -1,4 +1,4 @@
-/* === VARIABLES === */
+
 :root {
     --mfp-blue: #0066EE;
     --bg-color: #f6f6f8;
@@ -8,7 +8,7 @@
     --input-border: #e1e1e6;
 }
 
-/* === GLOBAL === */
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-color);
@@ -50,7 +50,7 @@ header {
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
-/* === PREMIUM PRICING STYLES === */
+
 .pricing-container { display: flex; flex-direction: column; gap: 15px; }
 .pricing-card { display: flex; flex-direction: column; position: relative; border: 1px solid #eee; }
 .price { font-size: 2.5rem; font-weight: 700; color: var(--mfp-blue); margin-bottom: 10px; line-height: 1; }
@@ -62,7 +62,7 @@ header {
 .elite-card { background: linear-gradient(135deg, var(--mfp-blue), #2575fc); border: none; transform: scale(1.02); box-shadow: 0 8px 30px rgba(0, 102, 238, 0.3); }
 .best-value { position: absolute; top: 15px; right: 15px; background: #FFD700; color: #000; font-size: 0.7rem; font-weight: 800; padding: 4px 8px; border-radius: 4px; }
 
-/* === FORM STYLES === */
+
 .header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
 .form-grid { display: flex; flex-wrap: wrap; gap: 15px; }
 .input-wrapper { flex: 1; min-width: 120px; display: flex; flex-direction: column; }
@@ -78,7 +78,7 @@ header {
 .select-container { position: relative; }
 .select-icon { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #888; pointer-events: none; }
 
-/* === DIARY STYLES === */
+
 .add-btn { background: var(--mfp-blue); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s; font-size: 1.2rem; }
 .task-item { background: white; border-radius: 12px; padding: 15px; margin-bottom: 10px; display: flex; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
 .task-checkbox { width: 22px; height: 22px; border: 2px solid #ddd; border-radius: 50%; margin-right: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -89,7 +89,7 @@ header {
 .delete-btn { color: #eee; cursor: pointer; padding: 5px; font-size: 0.9rem; }
 .task-item:hover .delete-btn { color: #e74c3c; }
 
-/* === RESULT & TABLE STYLES === */
+
 .result-hero { background: linear-gradient(135deg, var(--mfp-blue), #2575fc); color: white; padding: 25px; display: flex; justify-content: space-between; align-items: center; }
 .result-label { font-size: 0.8rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
 .result-number { font-size: 2.5rem; font-weight: 700; line-height: 1; margin: 5px 0; }
@@ -102,7 +102,7 @@ header {
 .meal-table tr:nth-child(even) { background-color: #f8f9fa; }
 .meal-table td:first-child { font-weight: bold; color: var(--mfp-blue); text-align: center; }
 
-/* === CAMERA & GRID STYLES === */
+
 #camera-view { background-color: #1e1e2e; min-height: 100vh; color: white; display: none; flex-direction: column; align-items: center; padding-top: 10px; }
 #camera-view.active { display: flex; }
 .exercise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 90%; max-width: 640px; margin-bottom: 15px; }
