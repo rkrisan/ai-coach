@@ -1,6 +1,4 @@
-// ===============================
-// SECTION 0: MEAL PLAN CALCULATOR
-// ===============================
+
 
 function generateMealPlan() {
     const gender = document.getElementById('gender').value;
@@ -58,9 +56,7 @@ function animateValue(id, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
-// ===============================
-// SECTION 0.5: DIARY LOGIC
-// ===============================
+
 let tasks = JSON.parse(localStorage.getItem('fitai-tasks')) || [];
 
 function initDiary() {
@@ -141,10 +137,6 @@ function renderTasks() {
 
 document.addEventListener('DOMContentLoaded', initDiary);
 
-
-// ===============================
-// SECTION 1: GLOBAL VARIABLES
-// ===============================
 let currentExercise = 'squat'; 
 let camera;
 let pose;
@@ -156,9 +148,6 @@ const loader = document.getElementById('loader');
 const startBtn = document.getElementById('startBtn');
 const stopBtn = document.getElementById('stopBtn');
 
-// ===============================
-// SECTION 2: NAVIGATION & SELECTION (UPDATED)
-// ===============================
 
 function switchTab(tabName) {
     const homeView = document.getElementById('home-view');
@@ -192,27 +181,23 @@ function switchTab(tabName) {
     }
 }
 
-// FIXED: Now properly handles the button click event
 function setExercise(type, btnElement) {
     currentExercise = type;
     
-    // 1. Remove 'active' class from ALL exercise buttons
+    
     const buttons = document.querySelectorAll('.ex-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // 2. Add 'active' class ONLY to the clicked button
+    
     if (btnElement) {
         btnElement.classList.add('active');
     }
 
-    // 3. Update Feedback Text
+    
     feedbackBox.innerText = `Selected: ${type.toUpperCase()}. Press Start.`;
     feedbackBox.style.color = "#00ffcc";
 }
 
-// ===============================
-// SECTION 3: MATH HELPERS
-// ===============================
 
 function calculateAngle(a, b, c) {
     let radians = Math.atan2(c.y - b.y, c.x - b.x) - Math.atan2(a.y - b.y, a.x - b.x);
@@ -221,9 +206,6 @@ function calculateAngle(a, b, c) {
     return angle;
 }
 
-// ===============================
-// SECTION 4: AI LOGIC LOOP
-// ===============================
 
 function onResults(results) {
     if (!results.poseLandmarks) return;
@@ -311,9 +293,7 @@ function onResults(results) {
     canvasCtx.restore();
 }
 
-// ===============================
-// SECTION 5: INITIALIZATION
-// ===============================
+
 
 pose = new Pose({locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`});
 pose.setOptions({
